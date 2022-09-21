@@ -14,10 +14,16 @@
 
         <script type="text/babel">
         // my app's code
-        ReactDOM.render(
-            <h1 id="my-heading">
-                <span>Hello <em>JSX</em></span> world!
-            </h1>,
+        const MyComponent = function() {
+            return React.createElement('span', null, 'I am so custom');
+        };
+        const MyJSXComponent = function() {
+            return <span>I am so custom JSX</span>;
+        };
+           
+           
+        ReactDOM.render(        
+            MyComponent(),
             document.getElementById('app')
         );
 
