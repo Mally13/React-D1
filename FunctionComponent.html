@@ -13,17 +13,26 @@
         <script src="react/babel.js"></script>
 
         <script type="text/babel">
-        // my app's code
+        // **function components**
+        // Old js syntax
         const MyComponent = function() {
-            return React.createElement('span', null, 'I am so custom');
+            return React.createElement('span', null, 'I am so custom function');
         };
+
+        // JSX syntax
+
         const MyJSXComponent = function() {
-            return <span>I am so custom JSX</span>;
+            return <span>I am so custom function JSX</span>;
         };
+
            
            
-        ReactDOM.render(        
-            MyComponent(),
+        ReactDOM.render(  
+            //** Rendering function components **     
+            //js syntax
+            // MyComponent(),
+            // jsx syntax
+            <MyJSXComponent/>,
             document.getElementById('app')
         );
 
