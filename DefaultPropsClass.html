@@ -20,17 +20,19 @@
                 // Old js syntax
                 // return React.createElement('span',null, 'I am a custom class component');
                 //or with jsx
-                return <span> I am a custom class component</span>;
+                return <span>My name is <em>{this.props.myname}</em>. I work at <em>{this.props.company}</em></span>;
 
                 
             }
 
 
-        }          
+        }       
+        MyClassComponent.defaultProps={
+            company:'Fana',
+        }     
            
         ReactDOM.render( 
-            // React.createElement(MyClassComponent),
-            <MyClassComponent/>,
+            <MyClassComponent myname="Mary Mutuku"/>,
             document.getElementById('app2')
         );
 
